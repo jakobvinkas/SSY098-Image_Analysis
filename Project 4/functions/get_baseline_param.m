@@ -1,7 +1,7 @@
 function [encoderNet,decoderNet, latentDim, numEpochs, lr, momentum] = get_baseline_param()
 latentDim = 2;
 imageSize = [28 28 1];
-numEpochs = 5;
+numEpochs = 20;
 lr = 1e-3;
 momentum = 1;
 

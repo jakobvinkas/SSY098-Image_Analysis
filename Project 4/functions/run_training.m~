@@ -64,7 +64,7 @@ else
                 genGrad, [], [], iteration, lr);
         [encoderNet.Learnables, avgGradientsEncoder, avgGradientsSquaredEncoder] = ...
             adamupdate(encoderNet.Learnables, ...
-                infGrad, [], [], iteration, lr);
+                infGrad, [], avgGradientsSquaredEncoder, iteration, lr);
     end
     elapsedTime = toc;
 
