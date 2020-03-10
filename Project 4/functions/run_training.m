@@ -73,6 +73,7 @@ else
     elbo = ELBOloss(XTest, xPred, zMean, zLogvar);
     fprintf("Epoch : "+epoch+" Test ELBO loss = "+gather(extractdata(elbo))+...
         ". Time taken for epoch = "+ elapsedTime + "s \n") 
+    end
 end
 % ADD MOMENTUM OFF VARIABLE
 end
