@@ -3,7 +3,7 @@ f = figure;
 figure(f)
 title("Example ground truth image vs. reconstructed image")
 for i = 1:2
-    for c=0:9
+    for c=0:3
         idx = iRandomIdxOfClass(YTest,c);
         X = XTest(:,:,:,idx);
 
@@ -14,7 +14,7 @@ for i = 1:2
         XPred = gather(extractdata(XPred));
 
         comparison = [X, ones(size(X,1),1), XPred];
-        subplot(4,5,(i-1)*10+c+1), imshow(comparison,[]),
+        subplot(4,2,(i-1)*4+c+1), imshow(comparison,[]),
     end
 end
 end
