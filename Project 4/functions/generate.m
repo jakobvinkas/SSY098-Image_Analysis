@@ -1,5 +1,5 @@
 function generate(decoderNet, latentDim)
-randomNoise = dlarray(randn(1,1,latentDim,9),'SSCB');
+randomNoise = dlarray(randn(1,1,latentDim,25),'SSCB');
 generatedImage = sigmoid(predict(decoderNet, randomNoise));
 generatedImage = extractdata(generatedImage);
 
